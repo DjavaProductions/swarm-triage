@@ -1,0 +1,27 @@
+{
+  "draft": {
+    "album": "",
+    "amount": "0.05",
+    "chain": "base",
+    "creator": "0x6D01a7E68634Bc6A685c83Fc44bEB6D9b21d4a0D",
+    "description": "Inspired by @saltorious1's harness announcement (2 June 2026, https://x.com/saltorious1/status/2061896332336418905): harness is a browser-based AI assistant in a floating PiP window - screen-aware, private, no downloads or extensions. The interesting part is how it pays for itself: a portion of $harness fees plus revenue buys and stakes $bnkr, and the yield subsidizes - eventually fully funds - inference, so the assistant stays affordable and capable. Bankr skills are a first-class provider for adding capabilities, and secondary marketplaces like @AskSurplus cut inference costs further.\n\nThis bounty tests that exact claim. Is the yield real money for real thinking, or just a pitch?\n\nTHE TASK\n1. Stake a fixed amount of $bnkr (your choice, minimum $25 worth - state the amount up front in your claim).\n2. For 7 consecutive days, run a defined daily workload on a screen-aware AI assistant (harness if you have access, otherwise any equivalent setup - say which one): at least 5 real tasks per day (research, writing, coding, or browsing tasks you actually need done - no filler tasks).\n3. Log every inference call: model, tokens in/out, and cost in USD, from the provider's own billing or dashboard.\n4. Log the $bnkr staking yield earned each day, from the chain (staking contract / wallet history).\n5. Publish a public ledger: daily inference cost vs daily yield, with wallet addresses, transaction hashes, and screenshots of the billing pages.\n\nWHAT COUNTS AS PROOF\n- The published ledger (spreadsheet or public doc) with all 7 days, both sides of the balance sheet.\n- Wallet addresses + transaction hashes for the stake and every yield claim.\n- Screenshots or exports of the inference billing for each day.\n- A final verdict, in numbers: did yield cover inference? By what margin, in USD and in percent? What would have to change (stake size, model choice, task mix) for it to break even?\n\nPASS / FAIL\n- Complete 7-day log with no missing days.\n- Every cost and yield figure traceable to a primary source (billing export, chain transaction).\n- Honest accounting - a negative verdict with clean books still passes; a positive verdict with missing receipts does not.\n\nWHY SALTORIOUS WOULD FUND IT\nThis is the economic engine of harness. If the yield pays for the thinking, the \"affordable and capable\" promise is real - and the numbers become the best pitch harness has. If it doesn't, he learns exactly how far off it is and what has to change. Either way, the answer is worth more than the bounty.",
+    "isOpenBounty": true,
+    "title": "Does the yield pay for the thinking? Fund 7 days of harness inference with $bnkr yield alone"
+  },
+  "nonce": "draft85ce735d9277c795233e2187b49539b12e29c85d5a46bccce94fb49fa56a57319a415856f13c4328939be958550b6b83a2116aa3e02c6e2fa8c1",
+  "signature": "0x4d17c6d99895d013c6cce1aea065963f2267b1309185712b6f1f3d2d84467d5849dca3f0d3d2d4533a223179793c75ffdb793398488ba3e6d3d95996b128a4291b",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"cid\": \"bafkreibb5jdayfbe7gp7n43sizitalt5fzwfs4ljfthdb4zdvs2bpcpmbm\",\n  \"url\": \"https://poidh.xyz/d/bafkreibb5jdayfbe7gp7n43sizitalt5fzwfs4ljfthdb4zdvs2bpcpmbm\",\n  \"publicFeed\": \"https://poidh.xyz/feed\",\n  \"note\": \"Draft published publicly. No onchain bounty was created or funded.\"\n}"
+      }
+    ],
+    "structuredContent": {
+      "cid": "bafkreibb5jdayfbe7gp7n43sizitalt5fzwfs4ljfthdb4zdvs2bpcpmbm",
+      "url": "https://poidh.xyz/d/bafkreibb5jdayfbe7gp7n43sizitalt5fzwfs4ljfthdb4zdvs2bpcpmbm",
+      "publicFeed": "https://poidh.xyz/feed",
+      "note": "Draft published publicly. No onchain bounty was created or funded."
+    }
+  }
+}
