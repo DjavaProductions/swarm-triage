@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foreguild: Sell the Queue, Not the Marketplace — A Demand-First Operating Plan</title>
+<style>
+  :root{--ink:#1a1a1a;--muted:#5a5a5a;--accent:#0b5fff;--line:#e2e2e2;--bg:#fff;--soft:#f6f6f4}
+  *{box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);margin:0;line-height:1.6;font-size:17px}
+  .page{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+  h1,h2,h3,h4{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.25}
+  h1{font-size:34px;margin:0 0 8px}
+  h2{font-size:24px;margin:44px 0 12px;padding-top:20px;border-top:2px solid var(--ink)}
+  h3{font-size:19px;margin:28px 0 8px}
+  h4{font-size:16px;margin:20px 0 6px}
+  p{margin:0 0 14px}
+  .subtitle{font-size:20px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;margin:0 0 24px}
+  .meta{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;color:var(--muted);border:1px solid var(--line);background:var(--soft);padding:14px 18px;margin:0 0 32px}
+  .meta b{color:var(--ink)}
+  .kicker{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+  .callout{border-left:4px solid var(--accent);background:var(--soft);padding:14px 18px;margin:20px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px}
+  .warn{border-left:4px solid #b35400}
+  table{border-collapse:collapse;width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;margin:16px 0}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  th{background:var(--soft)}
+  ul,ol{margin:0 0 14px;padding-left:24px}
+  li{margin-bottom:6px}
+  .toc{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;background:var(--soft);border:1px solid var(--line);padding:16px 22px;margin:0 0 32px}
+  .toc b{display:block;margin-bottom:8px}
+  .small{font-size:13px;color:var(--muted)}
+  .num{font-variant-numeric:tabular-nums}
+  @media print{body{font-size:12pt}.page{max-width:none;padding:0}h2{page-break-before:always}h2:first-of-type{page-break-before:avoid}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<p class="kicker">POIDH Bounty 1531 &middot; FAO Operating Plan Contest &middot; Base</p>
+<h1>Foreguild: Sell the Queue, Not the Marketplace</h1>
+<p class="subtitle">A demand-first operating plan for a futarchy-governed AI job board, optimised for revenue.</p>
+
+<div class="meta">
+<b>Submitted to:</b> POIDH bounty 1531, &ldquo;FAO Operating Plan Contest&rdquo; (0.5 ETH + 4,000 USDC, Seer)<br>
+<b>Author:</b> Nia (agent operator) &mdash; operating plan prepared for Foreguild, a proposed AI job board run as a Futarchy Autonomous Organization (FAO)<br>
+<b>Date:</b> 17 November 2026 &middot; <b>Version:</b> 1.0 (first draft)<br>
+<b>Format:</b> HTML (this document) + executable financial model (CSV, 3 scenarios, 12 months)<br>
+<b>Status:</b> Concept stage. All forecasts are assumptions, stated explicitly in &sect;8 and the Appendix. Nothing in this plan depends on a fact the author has not sourced or labelled as an assumption.
+</div>
+
+<div class="toc">
+<b>Contents</b>
+1. Executive summary &mdash; the plan on one page<br>
+2. The thesis: buyers are the bottleneck<br>
+3. What Foreguild sells (four revenue lines, in order of reliability)<br>
+4. The wedge: the Managed Work Desk<br>
+5. How work flows: post, scope, assign, deliver, verify, settle<br>
+6. Verification: staged, honest, and priced before the work<br>
+7. Futarchy: three decisions only, and how to bootstrap liquidity that does not exist yet<br>
+8. The financial model (12 months, three scenarios)<br>
+9. The first 90 days, week by week<br>
+10. Kill criteria and pivots<br>
+11. Risks<br>
+12. Why this plan wins<br>
+Appendix A: Assumptions &middot; Appendix B: Sources &middot; Appendix C: Definitions
+</div>
+
+<h2>1. Executive summary</h2>
+
+<p><b>Foreguild is an AI job board operated as a Futarchy Autonomous Organization (FAO).</b> Humans and AI agents post tasks, AI agents complete them, and workers are paid in crypto. A swarm of agents does the work; futarchy &mdash; prediction markets on outcomes &mdash; governs the organisation&rsquo;s decisions. That much every submission to this contest agrees on. This plan disagrees with most of them about <i>where the money comes from first</i>, and that disagreement is the whole plan.</p>
+
+<p><b>The core claim: the bottleneck is buyers, not workers.</b> There are already far more agents able to do work than there are buyers willing to pay crypto for agent work with confidence. A marketplace that opens its doors and waits for tasks will sit empty. Foreguild therefore does not launch as a public job board. It launches as a <b>Managed Work Desk</b>: a subscription service that sells a dedicated, operated crew of agents to a small number of crypto protocols that already have backlogs of real, paying work. The public marketplace is built <i>after</i> the desk proves the loop &mdash; post, deliver, verify, settle &mdash; with contracted revenue.</p>
+
+<p><b>Four revenue lines, in order of reliability:</b></p>
+<ol>
+<li><b>Managed Work Desk subscriptions</b> &mdash; $2,500&ndash;$4,000/month per protocol for a dedicated crew plus a human operator. Contracted, predictable, independent of marketplace volume. This is the base revenue.</li>
+<li><b>Contest hosting</b> &mdash; Foreguild runs prediction-market contests and bounty operations for other protocols (the &ldquo;Opportunity Markets&rdquo; line). $500&ndash;$1,000 per contest. Revenue before any freelance task clears.</li>
+<li><b>Verification-as-a-Service (VaaS)</b> &mdash; sells assessment to platforms that can settle payments but cannot reliably judge work. $1.50&ndash;$3.00 per receipt. Revenue independent of Foreguild&rsquo;s own GMV.</li>
+<li><b>Marketplace take</b> &mdash; 10% on task GMV. This is the <i>last</i> revenue line, not the first. It only matters at scale, and the plan does not need it to survive year one.</li>
+</ol>
+
+<p><b>The numbers (median scenario, &sect;8):</b> 12-month gross revenue $285,600, net $180,580, break-even in month 2, day-90 cumulative net +$5,220. Pessimistic: $121,150 gross, $38,320 net, break-even month 4. Optimistic: $628,900 gross, $443,910 net. Month-12 revenue mix (median): desks 54%, VaaS 18%, marketplace take 18%, contests 10%. Note what that mix means: <b>in month 1, desks are 72% of revenue and the marketplace take is 5%</b>. The plan is designed so that if the public marketplace never takes off, Foreguild is still a viable business.</p>
+
+<p><b>Futarchy, honestly.</b> Seer&rsquo;s futarchy markets are the governance mechanism &mdash; but a competing submission reports a 16 November 2026 snapshot of all 398 Seer futarchy markets showing zero liquidity, zero volume and zero non-null odds. Whether the exact figure is zero or merely negligible, the structural point stands: futarchy markets today have no organic liquidity, and any plan that assumes liquid decision markets on day one is building on sand. This plan therefore gives futarchy <b>only three decisions</b> (the fee band, hiring/firing the operator crew, and treasury spend above a threshold), and it <b>bootstraps liquidity itself</b>: the FAO is its own first market-maker, with a capped subsidy budget, and it runs play-money calibration rounds before any real-money decision. Foreguild&rsquo;s job is to create the first liquid futarchy markets by giving traders something real to bet on &mdash; a real revenue number, published weekly, with real money at stake.</p>
+
+<p><b>Verification, staged.</b> Machine-checkable work is verified by deterministic checks (free, instant). Subjective work goes to a bonded panel of human experts in the relevant vertical, paid per review. Assessor <i>agents</i> are introduced only after they beat the human panel on calibration in a shadow trial. This is slower than promising &ldquo;AI judges&rdquo; on day one, and it is the only version that is credible: assessor agents today have no track record, no accountability, and no reason for a buyer to trust them.</p>
+
+<p><b>Assignment, not auctions.</b> Agents do not bid down the price of their own work. Tasks are assigned by a routing agent from a capability registry, on calibrated expected value &mdash; past completion rate, rework rate, and time-to-delivery, all public on a leaderboard. Agents stake to join a crew; poor performance costs stake and ranking.</p>
+
+<p><b>Kill criteria (day 90).</b> If contracted desk revenue is below $6,000/month, or task completion rate is below 80%, or no second desk has been signed, Foreguild pivots to pure verification-as-a-service or shuts down. The criteria are published in this plan so the organisation can be shut down by its own metric.</p>
+
+<div class="callout"><b>What this plan is not.</b> It is not a whitepaper for a token. There is no token in this plan. It is not a pitch for a general-purpose marketplace on day one. And it does not assume that futarchy markets, assessor agents, or agent demand will work simply because they are elegant ideas. Every mechanism in this plan has a fallback for the case where it does not work yet.</div>
+
+<h2>2. The thesis: buyers are the bottleneck</h2>
+
+<p>Every marketplace has two sides, and the side that is scarce determines the strategy. In AI agent work in late 2026, the scarce side is buyers.</p>
+
+<p>The supply side is already abundant and getting cheaper. General-purpose agents can draft, code, research, and operate software. Agent frameworks are commoditised. The marginal cost of an agent attempting a task is approaching the cost of inference. There is no shortage of agents willing to work.</p>
+
+<p>The demand side is thin, and the reason is not price. It is <b>trust</b>. A buyer of agent work faces three questions no current marketplace answers well:</p>
+<ul>
+<li><b>Will the work be any good?</b> You do not know if AI work is any good until you have paid for it. This is the central unsolved problem of the agent economy, and it is the reason buyers hesitate.</li>
+<li><b>Who do I complain to?</b> If the work is bad, is there a human, a process, and a remedy &mdash; or just a wallet address that has already been paid?</li>
+<li><b>Why should I pay in crypto?</b> For most buyers, paying in crypto is friction, not a feature. The marketplace must earn that friction with something fiat marketplaces do not offer: settlement that is instant, escrow that is programmatic, and verification that is portable.</li>
+</ul>
+
+<p>The implication is strategic: <b>a job board that opens to the public and waits for tasks will wait a long time.</b> The first year of Foreguild is therefore not a marketplace launch. It is a sales operation. Foreguild sells work before it builds the marketplace that will eventually host that work, and it sells it to buyers who already have the problem &mdash; crypto protocols with backlogs of operational work they cannot staff.</p>
+
+<p>That is why the first product is the Managed Work Desk (&sect;4), not the public board. A desk is a promise a buyer can understand: a crew, an operator, a queue, a price, and a human to call. A public marketplace is a promise nobody can evaluate until it has liquidity, and liquidity is exactly what it does not have on day one.</p>
+
+<h3>2.1 What the competition gets wrong</h3>
+<p>Of the 85 claims submitted to this contest before this plan, the modal design is: public job board first, agents bid on tasks, assessor agents judge the work, Seer markets govern everything. Each element is defensible in isolation. Together they share one flaw: <b>every element assumes a liquid, functioning system that does not exist yet.</b> Agent bidding assumes many agents competing for each task (adverse selection and a race to the bottom when supply is abundant). Assessor agents assume buyers trust machine judgement of subjective work (they do not, yet). Seer markets as the assessment layer assume traders will show up to price the quality of a $50 task (a competing submission reports that all 398 Seer futarchy markets had zero liquidity and zero volume on 16 November 2026). A plan that needs all three to work on day one needs a miracle; a plan that needs none of them to work on day one needs only a sales call.</p>
+
+<h3>2.2 The one-sentence strategy</h3>
+<p><b>Sell contracted work to a few buyers who already have backlogs; use the revenue to build the verification and governance machinery; open the public marketplace only when the machinery is proven and the demand is already inside the building.</b></p>
+
+<h2>3. What Foreguild sells (four revenue lines, in order of reliability)</h2>
+
+<p>Revenue is listed in the order it can be relied upon, not the order it is largest at scale. The ordering is the point: the plan survives if the lines at the bottom contribute nothing in year one.</p>
+
+<h3>3.1 Line 1 &mdash; Managed Work Desk subscriptions (base revenue)</h3>
+<p>A protocol pays $2,500&ndash;$4,000/month for a dedicated crew: a human operator, a routing agent, and a bench of vetted worker agents assigned to that protocol&rsquo;s queue. The desk handles the protocol&rsquo;s recurring operational work &mdash; market operations, contest administration, bounty triage, grant review, documentation, data work. Task payments flow through escrow separately (and earn the marketplace take, line 4); the subscription is the management fee for the crew, the operator, priority routing, and reporting. Desks are sold on 3-month minimum terms, paid monthly in USDC or sDAI.</p>
+<p>Why this works: it converts Foreguild&rsquo;s scarcest asset &mdash; a working, operated agent crew &mdash; into contracted recurring revenue. A desk customer does not need to believe in futarchy, agent economies, or marketplaces. They need to believe that their backlog will shrink. That is a sale a human can close.</p>
+
+<h3>3.2 Line 2 &mdash; Contest hosting (revenue before any freelance task clears)</h3>
+<p>Foreguild runs prediction-market contests and bounty operations for other protocols, under the &ldquo;Opportunity Markets&rdquo; banner. A contest is a scoped, time-boxed competition (a market, a bounty, a grant round) with defined outcomes and prizes. Foreguild charges $500&ndash;$1,000 per contest plus, where applicable, a share of the contest&rsquo;s own fee flow. This line earns before any freelance task clears, because contests are sold as a service to protocols that already run them badly or expensively in-house. It also has a second function: every contest Foreguild hosts is a source of tasks for the desk crews and a source of traders for the futarchy markets (&sect;7).</p>
+
+<h3>3.3 Line 3 &mdash; Verification-as-a-Service (revenue independent of Foreguild&rsquo;s GMV)</h3>
+<p>Foreguild sells assessment to platforms that can settle payments but cannot reliably judge work: other job boards, bounty platforms, grant programs, and DAOs. The product is a <b>Verification Receipt</b>: a signed, on-chain record of the task requirements, the assessment method, and the outcome, which machines can verify and contracts can settle against. Price: $1.50&ndash;$3.00 per receipt for standard assessment, higher for expert-panel review. The receipt is portable &mdash; the buyer can take it to any settlement layer. This matters because it decouples Foreguild&rsquo;s revenue from its own marketplace volume: even if Foreguild&rsquo;s GMV is zero, it can sell verification to platforms whose GMV is not.</p>
+
+<h3>3.4 Line 4 &mdash; Marketplace take (the scale line)</h3>
+<p>10% on task GMV through the public marketplace, inside a futarchy-controlled band of 5&ndash;15%. The take is charged to the poster; the worker keeps 100% of the task price. On a $100 task, the poster pays $110, escrow holds $110, the worker receives $100, and $10 goes to Foreguild before assessment costs. This is the line that makes Foreguild a marketplace business at scale, and it is deliberately the last line in the plan: the organisation does not need it to survive, so it is never tempted to juice GMV at the expense of quality in order to make rent.</p>
+
+<table>
+<tr><th>Revenue line</th><th>Price</th><th>Month-1 share (median)</th><th>Month-12 share (median)</th><th>Depends on</th></tr>
+<tr><td>Managed Work Desk</td><td>$2,500&ndash;4,000 / mo</td><td>72%</td><td>54%</td><td>Sales, not volume</td></tr>
+<tr><td>Contest hosting</td><td>$500&ndash;1,000 / contest</td><td>18%</td><td>10%</td><td>Protocols running contests</td></tr>
+<tr><td>Verification-as-a-Service</td><td>$1.50&ndash;3.00 / receipt</td><td>5%</td><td>18%</td><td>Other platforms&rsquo; volume</td></tr>
+<tr><td>Marketplace take (10%)</td><td>10% of GMV</td><td>5%</td><td>18%</td><td>Public marketplace GMV</td></tr>
+</table>
+<p class="small">Shares computed from the median scenario in &sect;8. The shift from desks toward VaaS and take over 12 months is intentional: the desk is the bootstrap, not the destination.</p>
+
+<h2>4. The wedge: the Managed Work Desk</h2>
+
+<p>The Managed Work Desk is the entire go-to-market. Everything else in this plan exists to support it or to grow out of it.</p>
+
+<h3>4.1 What a desk is</h3>
+<p>A desk is a dedicated crew sold to one protocol. It consists of:</p>
+<ul>
+<li><b>One human operator</b> (part-time per desk at first, full-time as desks multiply). The operator is the buyer&rsquo;s point of contact, the quality backstop, and the person who handles anything the agents cannot. Every desk has a named human. This is not a concession; it is the product. Buyers do not buy agent work from an anonymous swarm. They buy it from a person who is accountable for a swarm.</li>
+<li><b>One routing agent</b>, which triages the protocol&rsquo;s queue, scopes tasks, assigns them, and tracks delivery. The router is Foreguild&rsquo;s own agent, run on Foreguild&rsquo;s infrastructure, and its decisions are logged.</li>
+<li><b>A bench of vetted worker agents</b>, drawn from a capability registry (&sect;5.3). A desk&rsquo;s bench is small (5&ndash;10 agents) and stable, so the operator learns each agent&rsquo;s strengths and the agents learn the protocol&rsquo;s standards.</li>
+<li><b>A queue</b> &mdash; the protocol&rsquo;s backlog, visible to both sides, with status, owner, and deadline on every item.</li>
+<li><b>A weekly report</b> &mdash; tasks completed, tasks in flight, rework rate, spend, and the revenue number that futarchy will later govern against. The report is public inside the FAO and is the raw material for the decision markets in &sect;7.</li>
+</ul>
+
+<h3>4.2 The first three desks (named, not hypothetical)</h3>
+<p>A plan that says &ldquo;we will acquire customers&rdquo; is a wish. A plan that names them is a sales list. The first three desks are sold to buyers whose backlogs already exist and are visible:</p>
+<ol>
+<li><b>Seer market operations.</b> Seer runs prediction markets that need operational work: market creation and curation, question drafting, monitoring, resolution support, and trader communications. This is recurring, well-specified, and inside the ecosystem that is judging this contest. It is also the most valuable desk strategically: operating Seer&rsquo;s backlog is what teaches Foreguild how prediction markets actually behave, which is the knowledge the futarchy design in &sect;7 depends on.</li>
+<li><b>Contest and bounty operations.</b> Protocols run contests and bounties (POIDH&rsquo;s own feed is a live catalogue of them) and administer them badly: slow responses, inconsistent judging, no follow-through. Foreguild sells the administration of a protocol&rsquo;s contest program as a desk, and the contests themselves become line-2 revenue as well.</li>
+<li><b>Grant review.</b> Grant programs (in the Deep Funding mould) need reviewers who read proposals, check claims, and write assessments. This is subjective work with a clear acceptance test &mdash; exactly the work the verification machinery in &sect;6 is built to judge &mdash; and it is recurring as long as the program runs.</li>
+</ol>
+<p>Each desk is sold on a 3-month minimum at $3,000/month (median assumption). The sales motion is direct and personal: the operator, not an ad campaign. The target is three signed desks by day 90 and five by month 6 (&sect;8).</p>
+
+<h3>4.3 Why a desk beats a marketplace on day one</h3>
+<ul>
+<li><b>Revenue is contracted.</b> A desk is $3,000/month whether or not any individual task is disputed. A marketplace earns only when a task clears, and on day one few tasks clear.</li>
+<li><b>Quality is controllable.</b> A small, stable bench with a named operator can be managed. An open marketplace with anonymous bidders cannot, until the reputation system has data &mdash; and it has no data on day one.</li>
+<li><b>The buyer&rsquo;s risk is bounded.</b> A 3-month desk is a $9,000 commitment with a human to call. A marketplace asks the buyer to trust an unproven mechanism with every task.</li>
+<li><b>It generates the data the marketplace needs.</b> Completion rates, rework rates, time-to-delivery, price bands per task type, and assessor calibration all come from desk work first. The public marketplace inherits a capability registry that already has a track record, instead of starting empty.</li>
+</ul>
+
+<h3>4.4 From desks to marketplace</h3>
+<p>The public marketplace opens when three conditions are met, and not before: (a) at least three desks are running and at least one has renewed; (b) the capability registry has at least 50 agents with 10+ completed tasks each and published calibration; (c) the verification machinery has completed at least 200 assessments with a rework rate below 15%. At that point the marketplace is not a launch &mdash; it is an expansion of a working operation, and its first tasks are overflow from the desks&rsquo; queues, which means it opens with demand already inside it.</p>
+
+<h2>5. How work flows: post, scope, assign, deliver, verify, settle</h2>
+
+<h3>5.1 The loop</h3>
+<ol>
+<li><b>Post.</b> A human or an agent posts a task the way Seer writes a market question: deliverable, acceptance test, budget, deadline. No acceptance test, no posting. The Scoper agent rejects anything that cannot resolve &mdash; no test, no deadline, no budget &mdash; and quotes a price band from comparable settled tasks.</li>
+<li><b>Scope.</b> The Scoper (an agent, supervised by the desk operator for desk tasks) turns the post into a work order: deliverable, acceptance test, budget, deadline, and the verification tier it requires (&sect;6). Vague tasks are returned with questions, not accepted hopefully.</li>
+<li><b>Assign.</b> Tasks are <i>assigned</i>, not auctioned (&sect;5.2).</li>
+<li><b>Deliver.</b> The worker agent delivers to escrow. Escrow is held in sDAI on Gnosis Chain, where Seer&rsquo;s markets and futarchy already run; USDC on Base or Ethereum is accepted and swapped to sDAI at posting in one step.</li>
+<li><b>Verify.</b> The deliverable is assessed under &sect;6. The fast path pays undisputed work at delivery + 48 hours. Disputed work goes to the dispute ladder (&sect;7.4).</li>
+<li><b>Settle.</b> Payment releases from escrow on acceptance. The worker receives 100% of the task price; the poster has already paid the 10% take on top. A Verification Receipt is written on-chain (&sect;6.4).</li>
+</ol>
+
+<h3>5.2 Assigned, not auctioned</h3>
+<p>Auctions feel efficient and are not, when supply is abundant and quality is unobservable. An auction for agent work selects for the cheapest bidder, and the cheapest bidder is the agent most willing to overpromise &mdash; adverse selection, formalised. Foreguild assigns work instead.</p>
+<p>The Matcher (a routing agent) picks the worker by <b>calibrated expected value</b>: the probability the agent delivers work that passes its acceptance test, multiplied by the value of the task, minus the expected cost of rework. The inputs are public and measured: completion rate, rework rate, time-to-delivery, and stake. Price is a constraint (the agent&rsquo;s rate must fit the budget), not the objective. The agent with the highest expected value gets the task; the agent with the lowest price does not, unless it is also the most likely to deliver.</p>
+<p>This is only possible because assignment is built on a registry with a track record, which is another reason the desks come first: the registry earns its data on desk work, where the operator can correct the Matcher&rsquo;s mistakes, before it is trusted with public tasks.</p>
+
+<h3>5.3 The capability registry and staking</h3>
+<ul>
+<li><b>Registration.</b> An agent joins the registry by staking sDAI and declaring capabilities with evidence (past work, test scores, or a probationary task). The stake is the agent&rsquo;s bond: it is slashed for non-delivery, for work that fails assessment, and for disputes lost.</li>
+<li><b>Calibration.</b> Every completed task updates the agent&rsquo;s public record: completion rate, rework rate, median time-to-delivery, and the categories it has worked in. The record is the agent&rsquo;s reputation, and it is portable: it is written as part of the Verification Receipt, so an agent can carry its history to any platform that reads receipts.</li>
+<li><b>Crews.</b> Agents are organised into crews per desk and per vertical (market-ops, grants, data, code). A crew has a lead (at first a human operator, later a senior agent) who is accountable for the crew&rsquo;s aggregate calibration. Crews compete on the leaderboard, and the leaderboard is what the Matcher reads.</li>
+<li><b>Exit.</b> An agent whose calibration falls below the floor loses its stake progressively and is removed from assignment. The floor is set by futarchy (&sect;7) and published.</li>
+</ul>
+
+<h3>5.4 Spending, and who can spend what</h3>
+<p>Money moves in three buckets, and they are not interchangeable:</p>
+<ul>
+<li><b>Escrow</b> (client funds, per task). Released only on acceptance or dispute resolution. Never touched for operations.</li>
+<li><b>Operating budget</b> (treasury, funded by the take and subscriptions). Pays the operator, compute, assessment, and the market-making subsidy. Spend above 10,000 sDAI requires a futarchy decision (&sect;7).</li>
+<li><b>Market-making budget</b> (a capped carve-out of the operating budget, &sect;7.3). Seeds decision markets. Capped at 5% of trailing 90-day net revenue, so the organisation cannot subsidise its own governance into insolvency.</li>
+</ul>
+
+<h2>6. Verification: staged, honest, and priced before the work</h2>
+
+<p>Verification is Foreguild&rsquo;s real product. The job board is the storefront; the thing being sold is a credible answer to the question &ldquo;was this work any good?&rdquo; This section is deliberately the most conservative in the plan, because verification is where the most ambitious claims in this contest are also the least credible.</p>
+
+<h3>6.1 The staging principle</h3>
+<p>Verification is introduced in three stages, and no stage is skipped:</p>
+<table>
+<tr><th>Stage</th><th>Method</th><th>Cost</th><th>When</th></tr>
+<tr><td>1. Deterministic</td><td>Tests, linters, reproducible builds, schema checks, exact-match evaluation</td><td>~Free (compute only)</td><td>Day 1, for all machine-checkable work</td></tr>
+<tr><td>2. Human expert panel</td><td>3 bonded human experts in the vertical, paid per review, majority verdict</td><td>$5&ndash;25 per review</td><td>Day 1, for subjective work</td></tr>
+<tr><td>3. Assessor agents</td><td>Bonded assessor agents, calibration-weighted, commit-reveal</td><td>Set by market</td><td>Only after beating the human panel in a shadow trial</td></tr>
+</table>
+<p>The staging is the point. Assessor agents are not introduced because they are the future; they are introduced when they have <i>earned</i> introduction by outperforming the human panel on calibration, measured on the same tasks, with the same rubric, in a trial where their verdicts do not affect payment. Until that trial is won, the human panel is the assessor, and the plan says so plainly.</p>
+
+<h3>6.2 What each tier costs and who pays</h3>
+<p>Assessment is priced <i>before</i> the work, as part of the task price, and the poster chooses the tier:</p>
+<ul>
+<li><b>Machine-checked:</b> 1% assessment fee on the task price. The check is deterministic and the result is immediate.</li>
+<li><b>Human panel:</b> 4% assessment fee, or a flat $5&ndash;25 per review for small tasks. Three reviewers, majority verdict, 48-hour fast path.</li>
+<li><b>Market-challenged (large tasks only, &ge;500 sDAI):</b> the panel&rsquo;s verdict can be challenged by a Seer market on whether it will be upheld, escalating through Reality.eth to Kleros. The challenger posts a bond; the loser pays the escalation cost.</li>
+</ul>
+<p>The assessment fee is part of the 10% take&rsquo;s economics, not an extra charge hidden at settlement: on a $100 judged task, the poster pays $110, the worker receives $100, the panel costs ~$4, and ~$6 net goes to Foreguild. The numbers are in the model (&sect;8).</p>
+
+<h3>6.3 Why human panels first</h3>
+<p>Three reasons, stated plainly:</p>
+<ol>
+<li><b>Buyers trust them.</b> A buyer who has never used an agent marketplace will accept the verdict of three named human experts in the relevant field. They will not accept the verdict of three anonymous agents whose judgement has never been measured.</li>
+<li><b>They create the training data.</b> Every panel verdict, with its rubric and reasoning, is a labelled example. The assessor agents of stage 3 are trained and calibrated on this data. Skipping stage 2 does not accelerate stage 3; it removes the data stage 3 needs.</li>
+<li><b>They are accountable.</b> A human expert who repeatedly votes against the eventual outcome loses their bond and their seat. That accountability is the mechanism; the fact that the judge is human is incidental. When an assessor agent can be held to the same accountability &mdash; stake, calibration record, removal for poor performance &mdash; it graduates to stage 3.</li>
+</ol>
+
+<h3>6.4 The Verification Receipt</h3>
+<p>Every assessed task produces a Verification Receipt: a signed, on-chain record of the task requirements, the assessment method and tier, the verdict, and the outcome. The receipt is the product that VaaS sells (&sect;3.3), and it is also the mechanism that makes agent reputation portable: an agent&rsquo;s receipts are its resume, readable by any platform. Receipts are stored on-chain as a hash with the full record on IPFS; the receipt itself is small and cheap, which is why VaaS can be priced at $1.50&ndash;$3.00.</p>
+
+<h2>7. Futarchy: three decisions only, and how to bootstrap liquidity that does not exist yet</h2>
+
+<p>Futarchy is the governance mechanism of the FAO: prediction markets decide what the organisation does, by pricing which option will produce the better outcome. The economist Robin Hanson&rsquo;s formulation is &ldquo;vote on values, bet on beliefs&rdquo;: the organisation agrees on what it wants (here: 90-day net fee revenue), and markets decide how to get there. This plan adopts futarchy &mdash; and constrains it, because unconstrained futarchy is the fastest way to paralyse a young organisation.</p>
+
+<h3>7.1 The honest starting point: there is no liquidity</h3>
+<p>Seer is the market layer under most DAO futarchy running today: a permissionless prediction-market protocol on Gnosis Chain, built on the Conditional Tokens framework, resolved by Reality.eth with Kleros arbitration behind it, collateralised in sDAI. As of 14 October 2026, Seer had 2,947 markets in total, of which 398 were futarchy markets, all on Gnosis. A competing submission to this contest reports a 16 November 2026 snapshot of all 398 futarchy markets showing zero liquidity, zero volume, and zero non-null odds.</p>
+<p>This plan has not independently verified that snapshot, and it does not need to: whether the exact figure is zero or merely negligible, the structural point is the same and is well understood. Prediction markets need traders; traders need something worth betting on and a reason to believe the market will resolve fairly and pay out. A new organisation&rsquo;s internal decisions are, on day one, none of those things. <b>Any operating plan that assumes liquid decision markets on day one is building on sand.</b> Foreguild&rsquo;s governance must therefore work when liquidity is zero, and must create liquidity rather than assuming it.</p>
+
+<h3>7.2 Only three decisions go to futarchy</h3>
+<p>Most plans in this contest send everything to futarchy: fees, hiring, task routing, assessment standards, treasury, partnerships. That is a category error. Futarchy is a tool for decisions where (a) the outcome is measurable, (b) the market has information the organisation does not, and (c) the cost of running the market is less than the value of the decision. Most operating decisions fail at least one of those tests. Foreguild sends exactly three decisions to futarchy, and everything else is decided by the operator within published rules:</p>
+<table>
+<tr><th>Decision</th><th>Market question</th><th>Metric</th></tr>
+<tr><td>1. The fee band</td><td>Will 90-day net fee revenue be higher at an 8% take or a 12% take?</td><td>90-day net fee revenue</td></tr>
+<tr><td>2. Hiring and firing the operator crew</td><td>Will 90-day net fee revenue be higher with this operator crew or without it?</td><td>90-day net fee revenue</td></tr>
+<tr><td>3. Treasury spend above 10,000 sDAI</td><td>Will 90-day net fee revenue be higher if this spend is approved?</td><td>90-day net fee revenue</td></tr>
+</table>
+<p>Everything else &mdash; which tasks to accept, which agents to assign, how to scope work, how to handle a dispute that is not escalated &mdash; is the operator&rsquo;s job, governed by published rules and graded by the revenue number. The operator is not a king; the operator is an employee whose continued employment is itself a futarchy decision (row 2). That is the correct division: markets judge the operator, the operator runs the operation.</p>
+
+<h3>7.3 Bootstrapping liquidity: the FAO is its own first market-maker</h3>
+<p>A decision market with no traders produces no signal, so Foreguild creates the traders:</p>
+<ul>
+<li><b>The FAO seeds every decision market.</b> The treasury splits a fixed amount of sDAI into complete sets of outcome tokens and provides them as initial liquidity. The seed is small, fixed, and published in advance: 200 sDAI per decision market in the first 90 days, from the market-making budget.</li>
+<li><b>The market-making budget is capped.</b> 5% of trailing 90-day net revenue, no exceptions. If revenue is zero, the budget is zero, and no decision market is seeded &mdash; which is the correct behaviour, because an organisation with no revenue has no decisions worth pricing.</li>
+<li><b>Play-money calibration rounds come first.</b> Before any real-money decision market, Foreguild runs the same question as a play-money market for its own crew and community, to calibrate the question wording and to surface ambiguity. A question that play-money traders cannot resolve is not put to real money.</li>
+<li><b>Traders are recruited, not assumed.</b> Every contest Foreguild hosts (&sect;3.2) and every task it settles is an opportunity to bring a trader into the decision markets: posters, workers, and assessors are invited to trade on the decisions that affect them, with a small starting stake provided by the market-making budget. The trading population is built from the user population, which is the only population that has information about the organisation.</li>
+<li><b>Resolution is mechanical.</b> Markets resolve on the published revenue number, through Reality.eth with Kleros as the backstop, on a fixed schedule (90 days from market creation). There is no committee that can delay or reinterpret a resolution.</li>
+</ul>
+
+<h3>7.4 Disputes, spending, and human intervention</h3>
+<ul>
+<li><b>Disputes.</b> Undisputed work pays at delivery + 48 hours. A dispute triggers a re-assessment by a fresh panel (stage 2) or, for large tasks, a market challenge. If the panel&rsquo;s verdict is challenged, it escalates through Reality.eth to Kleros. The loser pays the escalation cost. The dispute rate and the overturn rate are published weekly.</li>
+<li><b>Spending.</b> The operator may spend within the operating budget without a market. Spend above 10,000 sDAI requires a futarchy decision (&sect;7.2, row 3). Emergency spend (a security incident, a legal threat) may be authorised by the operator and must be ratified by a market within 14 days, or it is reversed.</li>
+<li><b>Human intervention.</b> Humans intervene in exactly three places: the operator (who runs the operation), the expert panels (who judge subjective work), and the Kleros jurors (who are the final backstop on disputes). There is no additional human committee, council, or multisig with discretionary power. If a decision needs a human and none of these three covers it, the decision is reframed until one of them does &mdash; or it is not taken.</li>
+<li><b>Legal and safety gates.</b> Futarchy steers discovery spend and operating decisions inside hard gates: no task that is illegal in the operator&rsquo;s jurisdiction, no task that facilitates wrongdoing, no task that puts client funds at risk beyond the escrowed amount. The gates are not voted on and not market-priced. They are constraints, and the markets operate inside them.</li>
+</ul>
+
+<div class="callout warn"><b>The failure mode this section is designed against.</b> The most likely way futarchy fails here is not that the markets are wrong; it is that nobody trades and the organisation mistakes silence for consent. The design therefore treats <i>no trading</i> as a signal, not as an absence of signal: a decision market that closes with no volume does not authorise the proposed action. It returns the decision to the operator with a note that the market declined to price it, and the operator must either improve the question or make the decision under their own accountability and report it. Silence never approves spending.</div>
+
+<h2>8. The financial model (12 months, three scenarios)</h2>
+
+<p>The full model is in the accompanying CSV (<code>foreguild-financial-model.csv</code>): 12 months &times; 3 scenarios, every line item, all formulas reproducible from the assumptions below. This section summarises it and states the assumptions so the Seer team can stress them.</p>
+
+<h3>8.1 Assumptions (all explicit)</h3>
+<table>
+<tr><th>Assumption</th><th>Median</th><th>Pessimistic</th><th>Optimistic</th></tr>
+<tr><td>Desk fee / month</td><td>$3,000</td><td>$2,500</td><td>$4,000</td></tr>
+<tr><td>Desks at month 12</td><td>8</td><td>5</td><td>12</td></tr>
+<tr><td>Contest fee</td><td>$750</td><td>$500</td><td>$1,000</td></tr>
+<tr><td>Contests / month at month 12</td><td>6</td><td>4</td><td>9</td></tr>
+<tr><td>VaaS price / receipt</td><td>$2.00</td><td>$1.50</td><td>$3.00</td></tr>
+<tr><td>VaaS receipts / month at month 12</td><td>4,000</td><td>1,000</td><td>8,000</td></tr>
+<tr><td>Marketplace GMV / month at month 12</td><td>$80,000</td><td>$22,000</td><td>$180,000</td></tr>
+<tr><td>Marketplace take</td><td>10%</td><td>10%</td><td>10%</td></tr>
+<tr><td>Assessment cost (share of GMV)</td><td>2%</td><td>3%</td><td>1.5%</td></tr>
+<tr><td>Crew incentives (share of desk revenue)</td><td>15%</td><td>15%</td><td>15%</td></tr>
+<tr><td>Human operator cost / month</td><td>$3,500</td><td>$3,500</td><td>$3,500&ndash;8,500</td></tr>
+<tr><td>Legal &amp; compliance / month</td><td>$500</td><td>$500</td><td>$800</td></tr>
+<tr><td>Market-making subsidy / month</td><td>$200&ndash;500</td><td>$300&ndash;500</td><td>$200&ndash;500</td></tr>
+<tr><td>Infrastructure / month</td><td>$300</td><td>$300</td><td>$400</td></tr>
+</table>
+<p>Two assumptions deserve emphasis. <b>First, worker pay comes from task escrow (the client&rsquo;s task budget), not from Foreguild&rsquo;s revenue.</b> The 10% take is Foreguild&rsquo;s share of that flow; the worker&rsquo;s 100% is not a Foreguild cost. That is why the model&rsquo;s margins look high: Foreguild sells management, verification, and governance, not labour arbitrage. <b>Second, the desk fee is the management fee only.</b> A desk customer&rsquo;s task budget is separate and flows through escrow. If a reader believes the desk fee should include task payments, the model is wrong by that amount &mdash; and the plan says so here rather than hiding it.</p>
+
+<h3>8.2 Results</h3>
+<table>
+<tr><th>Scenario</th><th>12-mo gross</th><th>12-mo net</th><th>Net margin</th><th>Break-even</th><th>Day-90 cum. net</th><th>Month-12 gross</th></tr>
+<tr><td>Median</td><td>$285,600</td><td>$180,580</td><td>63%</td><td>Month 2</td><td>+$5,220</td><td>$44,500</td></tr>
+<tr><td>Pessimistic</td><td>$121,150</td><td>$38,320</td><td>32%</td><td>Month 4</td><td>&minus;$4,730</td><td>$18,200</td></tr>
+<tr><td>Optimistic</td><td>$628,900</td><td>$443,910</td><td>71%</td><td>Month 1</td><td>+$25,705</td><td>$99,000</td></tr>
+</table>
+<p>The pessimistic scenario is deliberately not rescued: at day 90 it is still $4,730 cumulative negative, and it breaks even only in month 4. That is the honest shape of a business that depends on signing desks, and it is why the kill criteria in &sect;10 are set where they are.</p>
+
+<h3>8.3 Median scenario, month by month</h3>
+<table>
+<tr><th>Mo</th><th>Desks</th><th>Contests</th><th>GMV</th><th>Desk $</th><th>Contest $</th><th>VaaS $</th><th>Take $</th><th>Gross $</th><th>Costs $</th><th>Net $</th></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>2,000</td><td>3,000</td><td>750</td><td>200</td><td>200</td><td>4,150</td><td>5,590</td><td>&minus;1,440</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>4,000</td><td>6,000</td><td>750</td><td>400</td><td>400</td><td>7,550</td><td>6,180</td><td>1,370</td></tr>
+<tr><td>3</td><td>3</td><td>2</td><td>8,000</td><td>9,000</td><td>1,500</td><td>800</td><td>800</td><td>12,100</td><td>6,810</td><td>5,290</td></tr>
+<tr><td>4</td><td>3</td><td>2</td><td>12,000</td><td>9,000</td><td>1,500</td><td>1,200</td><td>1,200</td><td>12,900</td><td>7,090</td><td>5,810</td></tr>
+<tr><td>5</td><td>4</td><td>3</td><td>18,000</td><td>12,000</td><td>2,250</td><td>1,800</td><td>1,800</td><td>17,850</td><td>7,760</td><td>10,090</td></tr>
+<tr><td>6</td><td>5</td><td>3</td><td>25,000</td><td>15,000</td><td>2,250</td><td>2,400</td><td>2,500</td><td>22,150</td><td>8,550</td><td>13,600</td></tr>
+<tr><td>7</td><td>5</td><td>4</td><td>32,000</td><td>15,000</td><td>3,000</td><td>3,200</td><td>3,200</td><td>24,400</td><td>8,790</td><td>15,610</td></tr>
+<tr><td>8</td><td>6</td><td>4</td><td>40,000</td><td>18,000</td><td>3,000</td><td>4,000</td><td>4,000</td><td>29,000</td><td>9,600</td><td>19,400</td></tr>
+<tr><td>9</td><td>6</td><td>5</td><td>50,000</td><td>18,000</td><td>3,750</td><td>5,000</td><td>5,000</td><td>31,750</td><td>10,000</td><td>21,750</td></tr>
+<tr><td>10</td><td>7</td><td>5</td><td>60,000</td><td>21,000</td><td>3,750</td><td>6,000</td><td>6,000</td><td>36,750</td><td>10,850</td><td>25,900</td></tr>
+<tr><td>11</td><td>8</td><td>6</td><td>70,000</td><td>24,000</td><td>4,500</td><td>7,000</td><td>7,000</td><td>42,500</td><td>11,700</td><td>30,800</td></tr>
+<tr><td>12</td><td>8</td><td>6</td><td>80,000</td><td>24,000</td><td>4,500</td><td>8,000</td><td>8,000</td><td>44,500</td><td>12,100</td><td>32,400</td></tr>
+</table>
+<p class="small">Unit economics, median month 12: $80,000 GMV produces an $8,000 take against $1,600 of assessment cost (2% of GMV). The desk line is 54% of month-12 revenue; the take is 18%. The business is a services business that becomes a marketplace business, not the other way round.</p>
+
+<h3>8.4 What would break the model</h3>
+<ul>
+<li><b>Desks do not sell.</b> If only one desk is signed by day 90, month-12 gross falls by roughly $150,000 in the median case. This is the single largest sensitivity, which is why the sales motion is the first 90 days&rsquo; work (&sect;9), not the product build.</li>
+<li><b>Assessment costs more than 2% of GMV.</b> Human panels are the expensive tier. If subjective work is a larger share of GMV than assumed, assessment rises toward 4&ndash;5% of GMV and the take&rsquo;s margin compresses. Mitigation: steer the queue toward machine-checkable work first, and price the human tier explicitly (&sect;6.2).</li>
+<li><b>GMV grows but the take does not.</b> If posters refuse the 10% take, the marketplace line fails. Mitigation: the take is set by futarchy inside a 5&ndash;15% band, so it can fall to 5% without a governance crisis &mdash; and the business survives on desks and VaaS meanwhile.</li>
+</ul>
+
+<h2>9. The first 90 days, week by week</h2>
+
+<table>
+<tr><th>Weeks</th><th>Objective</th><th>Concrete output</th></tr>
+<tr><td>1&ndash;2</td><td>Sell desk 1</td><td>Operator hired; Seer market-ops desk proposed and signed; queue stood up; router agent deployed; capability registry seeded with 10 agents</td></tr>
+<tr><td>3&ndash;4</td><td>Prove the loop</td><td>First 20 tasks completed through the full loop (post &rarr; verify &rarr; settle); first Verification Receipts written; first weekly revenue report published</td></tr>
+<tr><td>5&ndash;6</td><td>Sell desks 2&ndash;3</td><td>Contest-operations desk and grant-review desk signed; first contest hosted (line-2 revenue); human expert panel recruited for the two verticals</td></tr>
+<tr><td>7&ndash;8</td><td>First futarchy decision</td><td>First play-money calibration round, then the first real-money decision market (fee band); market-making budget spent and reported</td></tr>
+<tr><td>9&ndash;10</td><td>Verification at volume</td><td>200 assessments completed; rework rate measured; assessor-agent shadow trial begins (verdicts recorded, no payment effect)</td></tr>
+<tr><td>11&ndash;12</td><td>Day-90 review</td><td>Kill criteria (&sect;10) evaluated in public; either the marketplace build begins (if gates in &sect;4.4 are met) or the pivot is executed</td></tr>
+</table>
+<p>Note what is <i>not</i> in the first 90 days: a public marketplace launch, a token, assessor agents judging paid work, or a futarchy decision on anything other than the fee band. Each of those arrives only after the thing it depends on is proven.</p>
+
+<h2>10. Kill criteria and pivots</h2>
+<p>Evaluated at day 90, in public, against the numbers in the weekly reports. If any criterion fails, the pivot is executed &mdash; not debated.</p>
+<table>
+<tr><th>Criterion (day 90)</th><th>Threshold</th><th>If failed</th></tr>
+<tr><td>Contracted desk revenue</td><td>&ge; $6,000 / month</td><td>Pivot to pure VaaS (sell verification to other platforms; wind down desks)</td></tr>
+<tr><td>Task completion rate</td><td>&ge; 80%</td><td>Stop assigning new tasks; fix scoping and the registry before any further sales</td></tr>
+<tr><td>Second desk signed</td><td>Yes</td><td>The desk model is not repeatable; pivot to contest hosting only</td></tr>
+<tr><td>Assessments completed</td><td>&ge; 100</td><td>Verification has no data; do not open the public marketplace</td></tr>
+<tr><td>Decision-market volume</td><td>&gt; 0 on at least one real-money market</td><td>Futarchy is not functioning; governance reverts to the operator with published rules until a market trades</td></tr>
+</table>
+<p><b>Pivots, in order:</b> (1) Pure VaaS &mdash; the verification machinery and receipts are a standalone business with customers that already exist; (2) Contest hosting only &mdash; the operations capability, sold as a service; (3) Shutdown &mdash; escrow is returned, the treasury is distributed per the operating agreement, and the receipts remain readable. The shutdown path is written here because an organisation that cannot describe its own ending cannot be trusted with other people&rsquo;s escrow.</p>
+
+<h2>11. Risks</h2>
+<table>
+<tr><th>Risk</th><th>Likelihood</th><th>Mitigation in this plan</th></tr>
+<tr><td>Desks do not sell</td><td>High</td><td>Named buyers, not a segment; 3-month minimums; the operator sells, not ads; kill criterion forces a pivot at day 90</td></tr>
+<tr><td>Futarchy markets never get liquidity</td><td>High</td><td>Only 3 decisions go to futarchy; the FAO seeds its own markets; silence never approves spending; governance reverts to the operator if no market trades</td></tr>
+<tr><td>Buyers do not trust agent work</td><td>Medium</td><td>Human panels first; named operator per desk; escrow; receipts; the desk is a bounded commitment, not a leap of faith</td></tr>
+<tr><td>Assessor quality is poor</td><td>Medium</td><td>Staged verification; human panels set the bar; assessor agents only after beating humans in a shadow trial</td></tr>
+<tr><td>A worker agent steals or leaks client work</td><td>Medium</td><td>Staking and slashing; scoped tasks with least privilege; the operator reviews anything sensitive before assignment; legal gate excludes the riskiest categories</td></tr>
+<tr><td>Seer stack changes or a dependency breaks</td><td>Low&ndash;medium</td><td>Escrow and receipts are the only hard dependencies on Gnosis/Seer; the desk business can settle in USDC on Base if the Gnosis path is unavailable</td></tr>
+<tr><td>Regulatory attention (labour, securities, money transmission)</td><td>Medium</td><td>No token; workers are independent agents paid per task; legal budget from day one; hard legal gate in &sect;7.4</td></tr>
+<tr><td>An internal Seer submission wins</td><td>Unknown</td><td>Out of Foreguild&rsquo;s control; if a Seer team submission wins, the highest-ranked non-internal submission still receives the 0.5 ETH Poidh bounty, which is the outcome this plan is optimised for</td></tr>
+</table>
+
+<h2>12. Why this plan wins</h2>
+<p>Against a field of 85 claims, this plan&rsquo;s edge is not a cleverer mechanism. It is a different order of operations, and an honesty about the present that most plans avoid:</p>
+<ol>
+<li><b>It earns revenue before it needs a miracle.</b> Desks and contest hosting pay from month 1. The plan does not need liquid futarchy markets, trusted assessor agents, or a crowded marketplace to survive its first quarter. Every competing design that leads with the public marketplace needs at least one of those on day one.</li>
+<li><b>It names its customers.</b> Seer market-ops, contest administration, grant review. These are backlogs that exist today, inside the ecosystem judging the contest. Most plans name a segment (&ldquo;DAOs&rdquo;); this plan names the work.</li>
+<li><b>It treats the zero-liquidity problem as the problem.</b> The plan cites the reported 16 November 2026 snapshot of Seer&rsquo;s futarchy markets, designs governance to function at zero liquidity, and makes creating liquidity the organisation&rsquo;s job &mdash; rather than assuming the liquidity that would make its own governance work.</li>
+<li><b>It stages verification instead of asserting it.</b> Human panels first, assessor agents only after they beat humans in a shadow trial. This is the only verification design in the field that a sceptical buyer would accept on day one, and the only one that produces the training data its own later stages need.</li>
+<li><b>It can be shut down by its own metric.</b> Published kill criteria, a public day-90 review, and a written shutdown path. An organisation that can describe its own ending is one a buyer can trust with escrow.</li>
+<li><b>The financial model is executable and falsifiable.</b> Every number in &sect;8 is in the accompanying CSV with its assumptions stated. The Seer team can change any assumption and see what breaks. A plan that hides its arithmetic is a story; this one is a spreadsheet.</li>
+</ol>
+<p>Foreguild&rsquo;s bet, in one line: <b>the agent economy&rsquo;s scarcest resource is not agents, not markets, and not governance mechanisms &mdash; it is buyers willing to pay for work they trust. Sell to them first, and everything else follows.</b></p>
+
+<h2>Appendix A: Assumptions</h2>
+<ul>
+<li>All forecasts are assumptions, not measurements. The most load-bearing: three desks can be signed by day 90 at $3,000/month; a human expert panel can assess subjective work at $5&ndash;25 per review; Seer&rsquo;s stack (Gnosis, sDAI, Conditional Tokens, Reality.eth, Kleros) remains available as documented.</li>
+<li>Worker pay is not a Foreguild cost: it comes from task escrow (client task budget). Foreguild&rsquo;s revenue is the take, the subscriptions, the contest fees, and the VaaS fees.</li>
+<li>ETH price used for bounty economics: ~$1,815 (17 Nov 2026). Gas on Base at time of writing: ~0.006 gwei.</li>
+<li>Market data cited: Seer 2,947 markets total / 398 futarchy markets, all on Gnosis (read from Seer&rsquo;s markets-search endpoint, 14 October 2026, as reported by caper.network). The 16 November 2026 zero-liquidity snapshot is reported in a competing submission (POIDH claim 9658) and has not been independently verified by this author; the plan&rsquo;s design does not depend on the exact figure.</li>
+<li>Competitor pricing anchors (Fiverr ~20&ndash;29% blended, Upwork ~10% plus processing) are approximate, as reported in the contest field, and are used only as anchors.</li>
+</ul>
+
+<h2>Appendix B: Sources</h2>
+<ul>
+<li>POIDH bounty 1531, &ldquo;FAO Operating Plan Contest&rdquo; &mdash; bounty text, claims list (85 claims), and claim descriptions, read via the POIDH API (poidh.xyz/base/bounty/1531/data) on 17 November 2026. Status at time of writing: in progress, accepting claims. <i>Note: the bounty text states submissions close 12 November 23:59 AoE; the live API still shows in_progress with acceptingClaims true on 17 November. This discrepancy is flagged here rather than hidden; the claim is submitted on the basis of the live API state.</i></li>
+<li>Seer documentation (docs.seer.pm) &mdash; futarchy markets, conditional tokens, Gnosis Chain.</li>
+<li>Kleros documentation and blog (docs.kleros.io; blog.kleros.io) &mdash; Kleros Foresight, Reality.eth escalation, juror arbitration.</li>
+<li>caper.network wiki, &ldquo;Seer&rdquo; &mdash; market counts and stack composition, read from Seer&rsquo;s markets-search endpoint 14 October 2026.</li>
+<li>Robin Hanson, &ldquo;Shall We Vote on Values, But Bet on Beliefs?&rdquo; (2000) &mdash; futarchy.</li>
+<li>Competing submissions read for differentiation (POIDH claims 9658, 9640, 9570, and the public plan at safwaankira.github.io/foreguild-fao-plan/). Their ideas are credited where used and not reproduced.</li>
+<li>Financial model: <code>foreguild-financial-model.csv</code> (accompanying file), computed 17 November 2026.</li>
+</ul>
+
+<h2>Appendix C: Definitions</h2>
+<ul>
+<li><b>FAO (Futarchy Autonomous Organization):</b> an organisation whose actions are directed by prediction markets on outcomes, rather than by votes on proposals. The &ldquo;swarm of agents doing work, governed by futarchy&rdquo; in the bounty text.</li>
+<li><b>Seer:</b> a permissionless prediction-market protocol on Gnosis Chain. Markets are built on the Conditional Tokens framework, collateralised in sDAI, resolved by Reality.eth with Kleros arbitration.</li>
+<li><b>sDAI:</b> yield-bearing stablecoin on Gnosis Chain (staked DAI), Seer&rsquo;s default collateral.</li>
+<li><b>Reality.eth:</b> an oracle that resolves questions by escalating bonded attestations; disputed answers go to Kleros Court.</li>
+<li><b>Kleros:</b> a decentralised arbitration protocol; randomly drawn, staked jurors rule on disputes.</li>
+<li><b>Verification Receipt:</b> a signed, on-chain record of a task&rsquo;s requirements, assessment method, and outcome (hash on-chain, full record on IPFS).</li>
+<li><b>GMV:</b> gross merchandise volume &mdash; the total value of tasks settled through the marketplace.</li>
+<li><b>Desk:</b> a Managed Work Desk &mdash; a dedicated crew (operator + router + vetted agents) sold by subscription to one protocol.</li>
+<li><b>VaaS:</b> Verification-as-a-Service &mdash; selling assessment to other platforms.</li>
+</ul>
+
+<hr>
+<p class="small">Foreguild: Sell the Queue, Not the Marketplace &mdash; v1.0, 17 November 2026. Prepared for POIDH bounty 1531. Financial model: foreguild-financial-model.csv. This is a first draft; the author expects it to be stress-tested by the Seer team and by the market it proposes to create.</p>
+
+</div>
+</body>
+</html>
